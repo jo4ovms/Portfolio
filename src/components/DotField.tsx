@@ -6,6 +6,8 @@ const PUSH_RADIUS = 90;
 const SPRING = 0.045;
 const DAMPING = 0.86;
 const EASING = 0.12;
+const RIPPLE_RADIUS = 150;
+const RIPPLE_FORCE = 9;
 
 interface Dot {
   bx: number;
@@ -121,6 +123,22 @@ export default function DotField() {
       mouse.y = -9999;
     }
 
+    function onPointerDown(e: globalThis.PointerEvent) {
+      if (reduced || e.pointerType !== 'touch') return;
+      const px = e.clientX;
+      const py = e.clientY;
+      for (const d of dots) {
+        const dx = d.x - px;
+        const dy = d.y - py;
+        const dist = Math.hypot(dx, dy);
+        if (dist < RIPPLE_RADIUS && dist > 0.01) {
+          const force = (1 - dist / RIPPLE_RADIUS) * RIPPLE_FORCE;
+          d.vx += (dx / dist) * force;
+          d.vy += (dy / dist) * force;
+        }
+      }
+    }
+
     function onVisibility() {
       if (document.hidden) stop();
       else start();
@@ -133,6 +151,7 @@ export default function DotField() {
     window.addEventListener('resize', onResize);
     window.addEventListener('pointermove', onPointerMove, { passive: true });
     window.addEventListener('pointerleave', onPointerLeave);
+    window.addEventListener('pointerdown', onPointerDown, { passive: true });
     document.addEventListener('visibilitychange', onVisibility);
 
     return () => {
@@ -140,6 +159,7 @@ export default function DotField() {
       window.removeEventListener('resize', onResize);
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerleave', onPointerLeave);
+      window.removeEventListener('pointerdown', onPointerDown);
       document.removeEventListener('visibilitychange', onVisibility);
     };
   }, []);
