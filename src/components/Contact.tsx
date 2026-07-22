@@ -1,3 +1,4 @@
+import { ArrowUpRight } from 'lucide-react';
 import type { Content } from '../content';
 import { useReveal } from '../hooks/useReveal';
 import MagnetLink from './MagnetLink';
@@ -33,7 +34,11 @@ export default function Contact({ t }: { t: Content }) {
             target='_blank'
             rel='noopener'
           >
-            GitHub ↗
+            GitHub{' '}
+            <ArrowUpRight
+              strokeWidth={1.75}
+              className='inline size-[0.85em] align-[-0.08em]'
+            />
           </a>
           <a
             className={metaLinkClass}
@@ -41,7 +46,11 @@ export default function Contact({ t }: { t: Content }) {
             target='_blank'
             rel='noopener'
           >
-            LinkedIn ↗
+            LinkedIn{' '}
+            <ArrowUpRight
+              strokeWidth={1.75}
+              className='inline size-[0.85em] align-[-0.08em]'
+            />
           </a>
         </div>
       </div>

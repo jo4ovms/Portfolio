@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import type { Content, Project } from '../content';
 import type { PreviewController } from '../hooks/usePreview';
 import MagnetLink from './MagnetLink';
@@ -32,9 +33,10 @@ function ProjectLink({
       onBlur={() => preview.hide()}
     >
       <span className='underline-slide'>{project.title}</span>
-      <span className='text-[0.9em] text-faint transition-[transform,color] duration-[450ms] ease-expo group-hover:translate-x-[3px] group-hover:-translate-y-[3px] group-hover:text-ink group-focus-visible:translate-x-[3px] group-focus-visible:-translate-y-[3px] group-focus-visible:text-ink'>
-        ↗
-      </span>
+      <ArrowUpRight
+        strokeWidth={1.75}
+        className='size-[0.95em] shrink-0 self-center text-faint transition-[transform,color] duration-[450ms] ease-expo group-hover:translate-x-[3px] group-hover:-translate-y-[3px] group-hover:text-ink group-focus-visible:translate-x-[3px] group-focus-visible:-translate-y-[3px] group-focus-visible:text-ink'
+      />
     </MagnetLink>
   );
 }
