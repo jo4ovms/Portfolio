@@ -23,7 +23,6 @@ export interface Content {
   who: string;
   headline: [string, string];
   lead: string;
-  hint: string;
   toggle: { label: string; href: string; hreflang: string };
   projectsLabel: string;
   projects: Project[];
@@ -46,7 +45,6 @@ export const content: Record<Lang, Content> = {
     who: 'desenvolvedor full-stack · ContaGou',
     headline: ['João Victor', 'Maciel dos Santos'],
     lead: 'Trabalho na ContaGou com Node, TypeScript, React e MongoDB, em sistemas que escritórios contábeis usam todos os dias.',
-    hint: 'o fundo reage ao seu cursor',
     toggle: { label: 'EN', href: '/en/', hreflang: 'en' },
     projectsLabel: 'Projetos',
     projects: [
@@ -110,7 +108,6 @@ export const content: Record<Lang, Content> = {
     who: 'full-stack developer · ContaGou',
     headline: ['João Victor', 'Maciel dos Santos'],
     lead: 'I work at ContaGou with Node, TypeScript, React and MongoDB, on systems accounting firms use every day.',
-    hint: 'the background reacts to your cursor',
     toggle: { label: 'PT', href: '/', hreflang: 'pt-BR' },
     projectsLabel: 'Projects',
     projects: [

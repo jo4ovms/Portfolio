@@ -9,9 +9,6 @@ export default function Corners({ t }: { t: Content }) {
       <p className='fixed left-[26px] top-[22px] z-3 animate-fade text-[12.5px] tracking-[0.02em] text-muted tabular-nums'>
         {clock}
       </p>
-      <p className='fixed bottom-[22px] left-[26px] z-3 animate-fade text-[12.5px] tracking-[0.02em] text-faint [@media(hover:none)]:hidden'>
-        {t.hint}
-      </p>
       <a
         href={t.toggle.href}
         lang={t.toggle.hreflang}
