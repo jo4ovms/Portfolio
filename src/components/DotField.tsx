@@ -114,6 +114,7 @@ export default function DotField() {
     }
 
     function onPointerMove(e: globalThis.PointerEvent) {
+      if (e.pointerType === 'touch') return;
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     }
