@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import About from './components/About';
 import Contact from './components/Contact';
 import Corners from './components/Corners';
@@ -25,6 +27,8 @@ export default function App({ lang }: { lang: Lang }) {
       </main>
       <Footer t={t} />
       <Preview controller={preview} />
+      <Analytics />
+      <SpeedInsights />
     </>
   );
 }
