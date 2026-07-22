@@ -98,7 +98,7 @@ export const content: Record<Lang, Content> = {
     ],
     contactTitle: 'Contato',
     contactLead:
-      'Estou aberto a novas oportunidades. O jeito mais rápido de falar comigo é por e-mail:',
+      'Estou aberto a novas oportunidades. Você pode me contatar por e-mail:',
     email: 'joaovictormacields@gmail.com',
     footer: 'João Victor · julho de 2026',
   },
@@ -160,8 +160,7 @@ export const content: Record<Lang, Content> = {
       "What interests me most is backend: software architecture, messaging and APIs that scale well. It was the subject of my capstone and it's what I study in my free time.",
     ],
     contactTitle: 'Contact',
-    contactLead:
-      "I'm open to new opportunities. The fastest way to reach me is email:",
+    contactLead: "I'm open to new opportunities. You can reach me by email:",
     email: 'joaovictormacields@gmail.com',
     footer: 'João Victor · July 2026',
   },
