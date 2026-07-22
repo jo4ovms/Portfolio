@@ -1,0 +1,129 @@
+@import '@fontsource/hanken-grotesk/400.css';
+@import '@fontsource/hanken-grotesk/500.css';
+@import '@fontsource/hanken-grotesk/600.css';
+@import 'tailwindcss';
+
+@theme {
+  --color-*: initial;
+  --color-bg: oklch(0.16 0.006 270);
+  --color-surface: oklch(0.21 0.007 270);
+  --color-ink: oklch(0.93 0.004 270);
+  --color-muted: oklch(0.68 0.008 270);
+  --color-faint: oklch(0.42 0.008 270);
+  --color-line: oklch(0.34 0.008 270);
+
+  --font-*: initial;
+  --font-sans: 'Hanken Grotesk', sans-serif;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-rise: rise 0.9s var(--ease-expo) both;
+  --animate-fade: fade 1.4s ease-out 0.9s both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-bg);
+  }
+
+  a:focus-visible {
+    outline: 1px solid var(--color-muted);
+    outline-offset: 5px;
+    border-radius: 2px;
+  }
+}
+
+.underline-slide {
+  position: relative;
+}
+
+.underline-slide::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 100%;
+  background: var(--color-ink);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s var(--ease-expo);
+}
+
+a:hover .underline-slide::after,
+a:focus-visible .underline-slide::after,
+a.underline-slide:hover::after,
+a.underline-slide:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.9s var(--ease-expo);
+}
+
+.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+#preview {
+  opacity: 0;
+  transform: translateY(10px) scale(0.97);
+  transition:
+    opacity 0.25s ease-out,
+    transform 0.45s var(--ease-expo);
+}
+
+#preview.show {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  #glow {
+    display: none;
+  }
+}
