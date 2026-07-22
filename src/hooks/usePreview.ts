@@ -13,9 +13,9 @@ interface Point {
   clientY: number;
 }
 
-const WIDTH = 340;
+const WIDTH = 300;
 const MARGIN = 20;
-const HEIGHT_CLEARANCE = 290;
+const HEIGHT_CLEARANCE = 300;
 
 function clampX(x: number) {
   return Math.min(x, window.innerWidth - WIDTH - MARGIN);

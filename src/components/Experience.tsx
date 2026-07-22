@@ -8,7 +8,7 @@ function Row({ item, index }: { item: ExperienceItem; index: number }) {
   return (
     <li
       ref={ref}
-      className={`grid grid-cols-[92px_1fr_auto] items-baseline gap-x-4 gap-y-2 border-b border-line/50 py-5 max-[720px]:grid-cols-1 max-[720px]:gap-y-1.5${index === 0 ? ' border-t' : ''}`}
+      className={`grid grid-cols-[92px_1fr_auto] items-baseline gap-x-4 gap-y-2 border-b border-line/50 py-5 max-[720px]:grid-cols-1 max-[720px]:gap-y-1.5 ${index === 0 ? 'border-t' : ''}`}
     >
       <span className='text-[13.5px] text-muted tabular-nums'>
         {item.years}

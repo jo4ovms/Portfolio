@@ -14,7 +14,8 @@ export default function Preview({
       ref={rootRef}
       id='preview'
       aria-hidden='true'
-      className={`pointer-events-none fixed z-30 w-[340px]${visible ? ' show' : ''}`}
+      style={{ width: 500, maxWidth: 'calc(100vw - 40px)' }}
+      className={`pointer-events-none fixed z-30 ${visible ? 'show' : ''}`}
     >
       <div className='overflow-hidden rounded-[10px] border border-line bg-surface shadow-[0_30px_70px_oklch(0_0_0_/_0.55),0_0_90px_oklch(0.93_0.004_270_/_0.06)]'>
         <div className='flex items-center gap-[5px] border-b border-[oklch(0.29_0.007_270)] px-3 py-[9px]'>
@@ -36,7 +37,7 @@ export default function Preview({
             <img
               src={data.image}
               alt=''
-              className='h-[150px] w-full rounded-[6px] border border-line/50 object-cover object-top'
+              className='block aspect-[2/1] w-full rounded-[6px] border border-line/50 object-cover object-top'
             />
           ) : (
             <div className='grid grid-cols-[2fr_1fr] gap-2'>
