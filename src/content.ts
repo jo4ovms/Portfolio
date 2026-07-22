@@ -42,7 +42,7 @@ export interface Content {
 export const content: Record<Lang, Content> = {
   pt: {
     locale: 'pt-BR',
-    place: 'Fraiburgo, SC',
+    place: 'Dourados, MS',
     who: 'desenvolvedor full-stack · ContaGou',
     headline: ['João Victor', 'Maciel dos Santos'],
     lead: 'Trabalho na ContaGou com Node, TypeScript, React e MongoDB, em sistemas que escritórios contábeis usam todos os dias.',
@@ -106,7 +106,7 @@ export const content: Record<Lang, Content> = {
   },
   en: {
     locale: 'en',
-    place: 'Fraiburgo, Brazil',
+    place: 'Dourados, Brazil',
     who: 'full-stack developer · ContaGou',
     headline: ['João Victor', 'Maciel dos Santos'],
     lead: 'I work at ContaGou with Node, TypeScript, React and MongoDB, on systems accounting firms use every day.',
