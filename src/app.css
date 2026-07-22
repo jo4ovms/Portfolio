@@ -9,7 +9,7 @@
   --color-surface: oklch(0.21 0.007 270);
   --color-ink: oklch(0.93 0.004 270);
   --color-muted: oklch(0.68 0.008 270);
-  --color-faint: oklch(0.42 0.008 270);
+  --color-faint: oklch(0.59 0.008 270);
   --color-line: oklch(0.34 0.008 270);
 
   --font-*: initial;
