@@ -45,7 +45,7 @@ export const content: Record<Lang, Content> = {
     place: 'Dourados, MS',
     who: 'desenvolvedor full-stack · ContaGou',
     headline: ['João Victor', 'Maciel dos Santos'],
-    lead: 'Trabalho na ContaGou com Node, TypeScript, React e MongoDB, em sistemas que escritórios contábeis usam todos os dias.',
+    lead: 'Trabalho na ContaGou com Node, TypeScript e React, em sistemas que escritórios contábeis usam todos os dias. Também sou cofundador da Dominion, uma plataforma de gestão para pequenas empresas.',
     toggle: { label: 'EN', href: '/en/', hreflang: 'en' },
     projectsLabel: 'Projetos',
     projects: [
@@ -124,7 +124,7 @@ export const content: Record<Lang, Content> = {
     place: 'Dourados, Brazil',
     who: 'full-stack developer · ContaGou',
     headline: ['João Victor', 'Maciel dos Santos'],
-    lead: 'I work at ContaGou with Node, TypeScript, React and MongoDB, on systems accounting firms use every day.',
+    lead: "I work at ContaGou with Node, TypeScript and React, on systems accounting firms use every day. I'm also co-founder of Dominion, a management platform for small businesses.",
     toggle: { label: 'PT', href: '/', hreflang: 'pt-BR' },
     projectsLabel: 'Projects',
     projects: [
