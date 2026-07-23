@@ -14,7 +14,18 @@ function Row({ item, index }: { item: ExperienceItem; index: number }) {
         {item.years}
       </span>
       <p>
-        <span className='text-[1rem] font-semibold'>{item.title}</span>
+        {item.href ? (
+          <a
+            href={item.href}
+            target='_blank'
+            rel='noopener'
+            className='underline-slide text-[1rem] font-semibold text-ink no-underline'
+          >
+            {item.title}
+          </a>
+        ) : (
+          <span className='text-[1rem] font-semibold'>{item.title}</span>
+        )}
         <span className='text-[0.92rem] text-muted'> · {item.role}</span>
       </p>
       <span className='justify-self-end whitespace-nowrap rounded-full border border-line px-[9px] py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.07em] text-muted max-[720px]:order-first max-[720px]:justify-self-start'>

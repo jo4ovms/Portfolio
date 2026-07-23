@@ -11,6 +11,7 @@ export interface Project {
 export interface ExperienceItem {
   years: string;
   title: string;
+  href?: string;
   role: string;
   status: string;
   desc: string;
@@ -49,6 +50,13 @@ export const content: Record<Lang, Content> = {
     projectsLabel: 'Projetos',
     projects: [
       {
+        title: 'Dominion',
+        href: 'https://dominionsv.com.br/',
+        desc: 'Plataforma de gestão modular que cofundei com o Elizeu: controle patrimonial, atendimento e CRM em um só núcleo de dados. Atende 4 empresas.',
+        tech: 'react · typescript · mui',
+        image: '/previews/dominion.png',
+      },
+      {
         title: 'Monitor de anomalias em APIs',
         href: 'https://github.com/jo4ovms/TCC',
         desc: 'Meu TCC. Detecta anomalias em tempo real com rate limiting, impossible travel e um modelo IsolationForest. As explicações vêm de um LLM.',
@@ -76,6 +84,15 @@ export const content: Record<Lang, Content> = {
         tech: 'node · typescript · react · mongodb · aws ec2 · websockets',
       },
       {
+        years: '2024–',
+        title: 'Dominion',
+        href: 'https://dominionsv.com.br/',
+        role: 'cofundador',
+        status: 'ativo',
+        desc: 'Cofundei a Dominion com o Elizeu: uma plataforma modular de gestão com três frentes que compartilham o mesmo núcleo de dados — controle patrimonial, atendimento e CRM. Hoje atende 4 empresas.',
+        tech: 'react · typescript · mui',
+      },
+      {
         years: '2024–25',
         title: 'Inovea Tecnologia',
         role: 'desenvolvedor web jr',
@@ -93,7 +110,7 @@ export const content: Record<Lang, Content> = {
     ],
     aboutTitle: 'Sobre',
     about: [
-      'Sou de Dourados, MS, e trabalho com desenvolvimento web desde 2024. Comecei mantendo sistemas legados e hoje lidero tecnicamente um time. O caminho entre uma coisa e outra foi estudo por conta própria e muito projeto pessoal.',
+      'Sou de Dourados, MS, e trabalho com desenvolvimento web desde 2024. Comecei mantendo sistemas legados, hoje lidero tecnicamente o time na ContaGou e sou cofundador da Dominion, ao lado do Elizeu. O caminho entre uma coisa e outra foi estudo por conta própria e muito projeto pessoal.',
       'O que mais me interessa é backend: arquitetura de software, mensageria e APIs que escalam bem. Foi o tema do meu TCC e é o que estudo no tempo livre.',
     ],
     contactTitle: 'Contato',
@@ -111,6 +128,13 @@ export const content: Record<Lang, Content> = {
     toggle: { label: 'PT', href: '/', hreflang: 'pt-BR' },
     projectsLabel: 'Projects',
     projects: [
+      {
+        title: 'Dominion',
+        href: 'https://dominionsv.com.br/',
+        desc: 'Modular management platform I co-founded with Elizeu: asset control, customer support and CRM in one data core. Serves 4 companies.',
+        tech: 'react · typescript · mui',
+        image: '/previews/dominion.png',
+      },
       {
         title: 'API anomaly monitor',
         href: 'https://github.com/jo4ovms/TCC',
@@ -139,6 +163,15 @@ export const content: Record<Lang, Content> = {
         tech: 'node · typescript · react · mongodb · aws ec2 · websockets',
       },
       {
+        years: '2024–',
+        title: 'Dominion',
+        href: 'https://dominionsv.com.br/',
+        role: 'co-founder',
+        status: 'active',
+        desc: 'Co-founded Dominion with Elizeu: a modular management platform with three fronts sharing the same data core — asset control, customer support and CRM. It serves 4 companies today.',
+        tech: 'react · typescript · mui',
+      },
+      {
         years: '2024–25',
         title: 'Inovea Tecnologia',
         role: 'junior web developer',
@@ -156,7 +189,7 @@ export const content: Record<Lang, Content> = {
     ],
     aboutTitle: 'About',
     about: [
-      "I'm from Dourados, Brazil, and I've been working with web development since 2024. I started out maintaining legacy systems and today I'm the technical lead of a team. What got me from one to the other was self-study and a lot of personal projects.",
+      "I'm from Dourados, Brazil, and I've been working with web development since 2024. I started out maintaining legacy systems, today I'm the technical lead at ContaGou, and I'm co-founder of Dominion, alongside Elizeu. What got me from one to the other was self-study and a lot of personal projects.",
       "What interests me most is backend: software architecture, messaging and APIs that scale well. It was the subject of my capstone and it's what I study in my free time.",
     ],
     contactTitle: 'Contact',
